@@ -1,0 +1,135 @@
+Introduction — Build and Train an LLM with JAX
+(Video transcript)
+
+0:06
+build and train
+0:06
+a mini GPT model from scratch using JAX.
+0:09
+JAX is an open-source Python library from Google
+0:12
+for fast numerical computing and machine learning.
+0:15
+It looks like NumPy, but it has additional key features
+0:18
+optimized for machine learning.
+0:21
+It can automatically compute gradients, it can compile code for speed,
+0:24
+and run efficiently on CPUs or GPUs or TPUs.
+0:28
+Because of this, JAX is used
+0:30
+by many teams to build and train
+0:31
+large language models and other neural network models.
+0:35
+JAX has become a popular choice for researchers
+0:37
+who need control over how their model runs on hardware.
+0:41
+In fact, Gemini 3 was trained on Google TPUs using JAX.
+0:45
+In this course, you'll learn some of the core concepts
+0:48
+behind building and training Google's powerful models
+0:50
+like Nano Banana and Veo and Gemini.
+0:54
+JAX allows the training to scale
+0:56
+to many GPUs or TPUs.
+0:58
+And it provides the tools needed
+1:00
+for sharding both data and model,
+1:03
+where you would split training batches
+1:05
+and large model weights across many devices.
+1:09
+I'm delighted to introduce the instructor, Chris Achard,
+1:11
+who is Developer Relations Engineer at Google.
+1:14
+As part of the TPU software team, Chris makes sure
+1:17
+that Google's libraries and their frameworks
+1:20
+provide what developers like you need to pre-train, post-train,
+1:22
+and serve the most advanced AI models.
+1:25
+Thanks Andrew. When Google built Gemini,
+1:28
+we needed a system that offered very high performance without sacrificing flexibility.
+1:32
+And we also had to iterate on architectures rapidly
+1:35
+while using tens of thousands of chips.
+1:37
+JAX offered all we need.
+1:38
+In this course, you will learn how to use JAX
+1:41
+by building and training a small LLM
+1:43
+with 20 million parameters from scratch.
+1:45
+You will learn how JAX uses the XLA compiler,
+1:48
+which is short for Accelerated Linear Algebra
+1:51
+to allow you to write normal Python functions
+1:53
+and then wrap it with special tools.
+1:55
+For example, you will learn how to wrap a function with "grad"
+1:59
+for automatic differentiation,
+2:01
+"jit" for just-in-time compilation,
+2:03
+and "vmap" to run over many inputs at once.
+2:05
+You will then combine these primitives to build a complex neural network
+2:08
+using human understandable syntax
+2:11
+using JAX's Flax/NNX.
+2:12
+By the end of this course, you'll know
+2:14
+how to define a neural network architecture in JAX
+2:16
+and train an LLM from scratch.
+2:18
+You'll also learn how to use
+2:20
+ecosystem tools like Grain for data loading,
+2:21
+Optax for optimizers, and Orbax for checkpointing.
+2:25
+The steps you will take to build and
+2:27
+train this mini GPT model in this course
+2:29
+are the same that we use to
+2:31
+build more powerful LLMs like Google Gemini.
+2:33
+Many people have worked to create this course.
+2:35
+I'd like to thank Jake VanderPlas and
+2:39
+Josh Gordon from Google and from DeepLearning.AI, Esmaeil Gargari
+2:43
+also contributed to this course.
+2:45
+The first lesson will be an overview of JAX
+2:47
+where you'll learn about JAX's core ideas
+2:49
+like automatic differentiation, fast compilation
+2:52
+and running code efficiently on CPUs, GPUs, and TPUs.
