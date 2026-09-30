@@ -1,0 +1,121 @@
+<svg viewBox="0 0 1400 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-size: 32px; font-weight: bold; text-anchor: middle; }
+      .section-label { font-size: 14px; font-weight: bold; fill: #333; }
+      .lib-box { font-size: 16px; font-weight: 600; text-anchor: middle; dominant-baseline: middle; }
+      .label { font-size: 12px; fill: #666; }
+      .hardware-bg { fill: #c8e6c9; }
+      .compiler-bg { fill: #ffe0b2; }
+      .jax-stack-bg { fill: #e1bee7; }
+      .solution-bg { fill: #fff9c4; }
+      .inference-bg { fill: #ffccbc; stroke: #d84315; stroke-width: 3; }
+      .tooling-bg { fill: #bbdefb; }
+      .additional-bg { fill: #90caf9; }
+      .dashed-line { stroke: #999; stroke-dasharray: 5,5; stroke-width: 2; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Title -->
+  <text x="700" y="40" class="title">JAX Ecosystem</text>
+
+  <!-- Hardware Layer -->
+  <line x1="50" y1="680" x2="1350" y2="680" class="dashed-line"/>
+  <text x="70" y="710" class="section-label">Hardware</text>
+
+  <rect x="400" y="680" width="120" height="60" class="hardware-bg" rx="8"/>
+  <text x="460" y="715" class="lib-box">CPU</text>
+
+  <rect x="600" y="680" width="120" height="60" class="hardware-bg" rx="8"/>
+  <text x="660" y="715" class="lib-box">GPU</text>
+
+  <rect x="800" y="680" width="120" height="60" class="hardware-bg" rx="8"/>
+  <text x="860" y="715" class="lib-box">TPU</text>
+
+  <!-- Compiler Layer -->
+  <line x1="50" y1="650" x2="1350" y2="650" class="dashed-line"/>
+  <text x="70" y="665" class="section-label">Compiler</text>
+
+  <rect x="250" y="600" width="900" height="50" class="compiler-bg" rx="8"/>
+  <text x="700" y="630" class="lib-box">XLA (Accelerated Linear Algebra)</text>
+
+  <!-- JAX Stack - Main Layer -->
+  <line x1="50" y1="570" x2="1350" y2="570" class="dashed-line"/>
+  <text x="70" y="555" class="section-label">JAX Stack</text>
+
+  <rect x="250" y="450" width="900" height="110" class="jax-stack-bg" rx="8"/>
+  <text x="700" y="510" class="lib-box" style="font-size: 20px;">JAX</text>
+
+  <!-- JAX Stack Libraries -->
+  <rect x="320" y="460" width="90" height="50" class="jax-stack-bg" stroke="#999" stroke-width="2" rx="6"/>
+  <text x="365" y="488" class="lib-box">Flax</text>
+
+  <rect x="430" y="460" width="90" height="50" class="jax-stack-bg" stroke="#999" stroke-width="2" rx="6"/>
+  <text x="475" y="488" class="lib-box">Optax</text>
+
+  <rect x="540" y="460" width="90" height="50" class="jax-stack-bg" stroke="#999" stroke-width="2" rx="6"/>
+  <text x="585" y="488" class="lib-box">Orbax</text>
+
+  <rect x="650" y="460" width="90" height="50" class="jax-stack-bg" stroke="#999" stroke-width="2" rx="6"/>
+  <text x="695" y="488" class="lib-box">Grain</text>
+
+  <rect x="760" y="460" width="90" height="50" class="jax-stack-bg" stroke="#999" stroke-width="2" rx="6"/>
+  <text x="805" y="488" class="lib-box">Chex</text>
+
+  <!-- Solution Libraries -->
+  <line x1="250" y1="430" x2="1150" y2="430" class="dashed-line"/>
+  <text x="200" y="380" class="section-label">Solution</text>
+  <text x="200" y="395" class="section-label">libraries</text>
+
+  <rect x="310" y="360" width="120" height="60" class="solution-bg" rx="8"/>
+  <text x="370" y="395" class="lib-box">MaxText</text>
+
+  <rect x="520" y="360" width="140" height="60" class="solution-bg" rx="8"/>
+  <text x="590" y="395" class="lib-box">MaxDiffusion</text>
+
+  <rect x="740" y="360" width="100" height="60" class="solution-bg" rx="8"/>
+  <text x="790" y="395" class="lib-box">Keras</text>
+
+  <!-- Inference Libraries -->
+  <text x="1050" y="380" class="section-label">Inference</text>
+
+  <rect x="980" y="280" width="140" height="150" class="inference-bg" rx="8"/>
+  <text x="1050" y="345" class="lib-box">vLLM</text>
+  <text x="1050" y="370" class="lib-box">TPU</text>
+
+  <!-- Additional Libraries -->
+  <rect x="850" y="360" width="100" height="60" class="additional-bg" rx="8"/>
+  <text x="900" y="395" class="lib-box">Qwix</text>
+
+  <rect x="970" y="360" width="100" height="60" class="additional-bg" rx="8"/>
+  <text x="1020" y="395" class="lib-box">Tunix</text>
+
+  <!-- Tooling & Utils -->
+  <text x="70" y="240" class="section-label">Tooling &</text>
+  <text x="70" y="260" class="section-label">Util libraries</text>
+
+  <rect x="50" y="280" width="100" height="60" class="tooling-bg" rx="8"/>
+  <text x="100" y="315" class="lib-box">XProf</text>
+
+  <rect x="50" y="360" width="100" height="60" class="tooling-bg" rx="8"/>
+  <text x="100" y="395" class="lib-box">Metrax</text>
+
+  <!-- Legend -->
+  <line x1="200" y1="100" x2="230" y2="100" stroke="#c8e6c9" stroke-width="20"/>
+  <text x="250" y="105" class="label">Hardware</text>
+
+  <line x1="430" y1="100" x2="460" y2="100" stroke="#ffe0b2" stroke-width="20"/>
+  <text x="480" y="105" class="label">Compiler</text>
+
+  <line x1="660" y1="100" x2="690" y2="100" stroke="#e1bee7" stroke-width="20"/>
+  <text x="710" y="105" class="label">JAX AI Stack libraries</text>
+
+  <line x1="200" y1="130" x2="230" y2="130" stroke="#fff9c4" stroke-width="20"/>
+  <text x="250" y="135" class="label">Solution libraries</text>
+
+  <line x1="430" y1="130" x2="460" y2="130" stroke="#ffccbc" stroke-width="20"/>
+  <text x="480" y="135" class="label">Inference libraries</text>
+
+  <line x1="660" y1="130" x2="690" y2="130" stroke="#90caf9" stroke-width="20"/>
+  <text x="710" y="135" class="label">Additional libraries</text>
+</svg>
